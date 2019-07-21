@@ -11,7 +11,7 @@ const todos = [
     },
     {
         id: 3,
-        desc: "Take out the bullshit",
+        desc: "Take out the excuses",
         completed: false
     },
     {

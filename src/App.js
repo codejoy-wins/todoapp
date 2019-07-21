@@ -8,7 +8,7 @@ class App extends React.Component {
     super()
     this.state = {
       todos: todosdata,
-      night: false
+      night: true
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleClick = this.handleClick.bind(this)
