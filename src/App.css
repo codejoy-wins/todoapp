@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+#todo{
+  padding: 2vw;
+}
 .blue{
   color: gray;
 }
