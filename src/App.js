@@ -11,6 +11,7 @@ class App extends React.Component {
       night: false
     }
     this.handleChange = this.handleChange.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleChange(id){
@@ -29,6 +30,31 @@ class App extends React.Component {
     })
   }
 
+  handleClick(){
+    console.log("toggling mode")
+    if(this.state.night){
+      document.getElementById("main").style="color:white; background-color: black;"
+      console.log("night time")
+      this.setState(prevState=>{
+        return{
+          todos: prevState.todos,
+          night: !prevState.night
+        }
+      })
+    }else{
+      document.getElementById("main").style="color:black;"
+      console.log("day time");
+      this.setState(prevState=>{
+        return{
+          todos: prevState.todos,
+          night: !prevState.night
+        }
+      })
+    }
+    
+
+  }
+
   render(){
     const todos = todosdata.map(todo=>{
       return(
@@ -36,11 +62,12 @@ class App extends React.Component {
       )
     })
     return (
-      <div className="App">
+      <div id="main" className="App">
         <h1>Todo App</h1>
         <div>
           {todos}
         </div>
+        <button className="blue" onClick={this.handleClick}>Toggle Night Mode</button>
       </div>
     );
   }

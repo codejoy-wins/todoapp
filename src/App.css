@@ -1,6 +1,15 @@
 .App {
   text-align: center;
 }
+.blue{
+  color: gray;
+}
+
+.Night{
+  text-align: center;
+  color: white;
+  background-color: black;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
