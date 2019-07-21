@@ -67,7 +67,8 @@ class App extends React.Component {
         <div>
           {todos}
         </div>
-        <button className="blue" onClick={this.handleClick}>Toggle Night Mode</button>
+        <button className="blue" onClick={this.handleClick}>Toggle Night Mode</button><hr/>
+        <a href="https://maxjann.com">Jann Software</a>
       </div>
     );
   }

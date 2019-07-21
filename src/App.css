@@ -4,6 +4,10 @@
 .blue{
   color: gray;
 }
+a{
+  color:gray;
+  text-decoration: none;
+}
 
 .Night{
   text-align: center;
