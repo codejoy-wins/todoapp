@@ -7,6 +7,7 @@ class App extends React.Component {
   constructor(){
     super()
     this.state = {
+      todos: todosdata,
       night: false
     }
     this.handleChange = this.handleChange.bind(this)
@@ -14,6 +15,18 @@ class App extends React.Component {
 
   handleChange(id){
     console.log(`changing ${id}`)
+    this.setState(prevState=>{
+      const updatedTodos = prevState.todos.map(todo=>{
+        if(todo.id === id){
+          todo.completed = !todo.completed
+        }
+        return todo
+      })
+      return {
+        todos: updatedTodos,
+        night: prevState.night
+      }
+    })
   }
 
   render(){
